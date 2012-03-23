@@ -37,7 +37,11 @@ $(WORK_DIR)/INFO: Makefile $(SPK_ICON)
 	@$(MSG) "Creating INFO file for $(SPK_NAME)"
 	@echo package=\"$(SPK_NAME)\" > $@
 	@echo version=\"$(SPK_VERS)-$(SPK_REV)\" >> $@
-	@echo description=\"$(COMMENT)\" >> $@
+	@echo description=\"$(DESCRIPTION)\" >> $@
+	@echo $(foreach LANGUAGE, $(LANGUAGES), \
+		$(shell [ ! -z "$(DESCRIPTION_$(shell echo $(LANGUAGE) | tr [:lower:] [:upper:]))" ] && \
+		echo description_$(LANGUAGE)=\\\"$(DESCRIPTION_$(shell echo $(LANGUAGE) | tr [:lower:] [:upper:]))\\\") \
+	) >> $@
 	@echo maintainer=\"$(MAINTAINER)\" >> $@
 ifneq ($(strip $(ARCH)),)
 	@echo arch=\"$(ARCH)\" >> $@
@@ -167,7 +171,7 @@ package: $(SPK_FILE_NAME)
 ifneq ($(PUBLISHING_URL),)
 ifneq ($(PUBLISHING_KEY),)
 publish: package
-	curl -A "spksrc v1.0; $(PUBLISHING_KEY)" \
+	curl -k -A "spksrc v1.0; $(PUBLISHING_KEY)" \
 	     -F "package=@$(SPK_FILE_NAME);filename=$(notdir $(SPK_FILE_NAME))" \
 	     $(PUBLISHING_URL)
 else

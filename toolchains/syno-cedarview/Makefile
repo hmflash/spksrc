@@ -1,4 +1,3 @@
-
 TC_NAME = syno-cedarview
 
 TC_DIST_NAME = gcc421_glibc236_x86_cedarview-GPL.tgz

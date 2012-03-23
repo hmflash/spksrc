@@ -7,7 +7,8 @@ DSM_UI_DIR = app
 DEPENDS = cross/busybox cross/$(SPK_NAME)
 
 MAINTAINER = SynoCommunity
-COMMENT    = A Fast, Easy, and Free BitTorrent Client
+DESCRIPTION = Transmission is an easy and fast BitTorrent client. You can control it remotly with its web interface or dedicated applications.
+DESCRIPTION_FRE = Transmission est un client BitTorrent simple et rapide. Vous pouvez le contrôler à distance grâce à son interface web ou des applications dédiées.
 ADMIN_PORT = 9091
 RELOAD_UI = yes
 DISPLAY_NAME = Transmission

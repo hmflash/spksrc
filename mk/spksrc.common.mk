@@ -14,8 +14,12 @@ MSG = echo "===> "
 # environment.
 RUN = cd $(WORK_DIR)/$(PKG_DIR) && env $(ENV)
 
+# Available languages
+LANGUAGES = chs cht csy dan enu fre ger hun ita jpn krn nld nor plk ptb ptg rus spn sve trk
+
 # Load local configuration
 LOCAL_CONFIG_MK = ../../local.mk
 ifneq ($(wildcard $(LOCAL_CONFIG_MK)),)
 include $(LOCAL_CONFIG_MK)
 endif
+

@@ -9,7 +9,8 @@ DEPENDS += cross/pycrypto cross/pycurl cross/pil cross/cheetah cross/yenc
 DEPENDS += cross/sqlalchemy cross/pyaudio cross/pyalsa
 
 MAINTAINER = SynoCommunity
-COMMENT    = Python Programming Language
+DESCRIPTION = Python Programming Language. This package is not startable, it is just required by other packages as dependency.
+DESCRIPTION_FRE = Langage de programmation Python. Ce paquet ne se lance pas, il est juste requis en tant que dépendance par d\\\'autres paquets.
 RELOAD_UI = yes
 DISPLAY_NAME = Python
 
