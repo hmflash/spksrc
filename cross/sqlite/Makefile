@@ -5,8 +5,6 @@ PKG_DIST_NAME = $(PKG_NAME)-$(PKG_VERS).$(PKG_EXT)
 PKG_DIST_SITE = http://www.sqlite.org/2015
 PKG_DIR = $(PKG_NAME)-$(PKG_VERS)
 
-DEPENDS = cross/zlib cross/speex
-
 HOMEPAGE = http://www.sqlite.org/
 COMMENT  = Self-contained, serverless, zero-configuration, transactional SQL database engine.
 LICENSE  = http://www.sqlite.org/copyright.html
