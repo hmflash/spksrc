@@ -1,7 +1,8 @@
 PKG_NAME = mono
-PKG_VERS = 3.10.0
+PKG_VERS = 4.0.4
+PKG_REV = .1
 PKG_EXT = tar.bz2
-PKG_DIST_NAME = $(PKG_NAME)-$(PKG_VERS).$(PKG_EXT)
+PKG_DIST_NAME = $(PKG_NAME)-$(PKG_VERS)$(PKG_REV).$(PKG_EXT)
 PKG_DIST_SITE = http://download.mono-project.com/sources/mono
 PKG_DIR = $(PKG_NAME)-$(PKG_VERS)
 
@@ -24,4 +25,4 @@ MONO_NATIVE_INSTALL = $(WORK_DIR)/../../../native/$(PKG_NAME)/work-native/instal
 
 .PHONY: myPreConfigure
 myPreConfigure:
-	$(RUN) autoreconf
+	$(RUN) autoreconf -i

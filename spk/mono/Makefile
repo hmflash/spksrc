@@ -1,6 +1,6 @@
 SPK_NAME = mono
-SPK_VERS = 3.10.0
-SPK_REV = 4
+SPK_VERS = 4.0.4
+SPK_REV = 5
 SPK_ICON = src/mono.png
 
 REQUIRED_DSM = 5.0
@@ -13,7 +13,7 @@ DESCRIPTION = Mono is a software platform designed to allow developers to easily
 RELOAD_UI = yes
 DISPLAY_NAME = Mono
 STARTABLE = no
-CHANGELOG = "No longer in beta"
+CHANGELOG = "Upgrade to Mono 4.0.4 SR4"
 
 HOMEPAGE = http://mono-project.com/
 LICENSE  = https://github.com/mono/mono/blob/master/LICENSE
